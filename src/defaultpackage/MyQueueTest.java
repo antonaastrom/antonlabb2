@@ -97,8 +97,9 @@ public class MyQueueTest {
 			// do nothing
 
 		} else {
-			System.out
-					.println("testIsEmpty got false when the queue was empty");
+			System.err
+					.println("testIsEmpty: got false when the queue was empty");
+			return;
 		}
 
 		// insert value
@@ -108,8 +109,9 @@ public class MyQueueTest {
 		if (numberQueue.isEmpty() == false) {
 			// do nothing
 		} else {
-			System.out
-					.println("testIsEmpty got true when the queue wasn't empty");
+			System.err
+					.println("testIsEmpty: got true when the queue wasn't empty");
+			return;
 		}
 		// test successful
 		System.out.println("testIsEmpty: ok");

@@ -28,7 +28,7 @@ public class MyListTest {
 
 private static void testMyListIterator() {
 	
-	int counter = 0;
+//	int counter = 0;
 	MyList<Integer> numberList = new MyList<Integer>();
 
 	for (int i = 0; i < 5; i++) {

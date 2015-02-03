@@ -5,10 +5,17 @@ import java.util.Iterator;
 public class MyListIterator<E> implements Iterator<E> {
 
 	private Node<E> currentNode;
+	
+	private Node<E> prevNode;
+	
+	private int size;
 
-	public MyListIterator(Node<E> node) {
+	public MyListIterator(MyList<E> list) {
 
-		currentNode = node; // Node<E>(node.getData(),node.getNext());
+		currentNode = list.getFirst();
+		prevNode = null;
+		size = list.size();
+		// Node<E>(node.getData(),node.getNext());
 
 	}
 
@@ -31,7 +38,9 @@ public class MyListIterator<E> implements Iterator<E> {
 
 		if (hasNext()) {
 
+			prevNode = currentNode;
 			currentNode = currentNode.getNext();
+			
 
 			return tmpdata;
 

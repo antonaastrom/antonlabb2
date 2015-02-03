@@ -52,7 +52,7 @@ public class MyList<E> implements Iterable<E> {
 	
 	public Iterator<E> iterator(){
 		
-		MyListIterator<E> iterator = new MyListIterator<E>(first);
+		MyListIterator<E> iterator = new MyListIterator<E>(this);
 		return iterator;
 		
 	}
@@ -75,6 +75,11 @@ public class MyList<E> implements Iterable<E> {
 
 		return size;
 
+	}
+
+	public Node<E> getFirst() {
+		
+		return first;
 	}
 
 }
